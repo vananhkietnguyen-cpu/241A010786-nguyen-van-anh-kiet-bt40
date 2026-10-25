@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Discovery App - Khám phá phim đỉnh cao</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo">
+            <i class="fa-solid fa-film"></i>
+            <h1>MovieHub</h1>
+        </div>
+        <div class="header-controls">
+            <button id="themeToggleBtn" aria-label="Chuyển đổi giao diện">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container Layout (CSS Grid) -->
+    <div class="app-container">
+        <!-- Sidebar: Bộ lọc và Tìm kiếm -->
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</h3>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Nhập tên phim...">
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3><i class="fa-solid fa-filter"></i> Thể loại</h3>
+                <div id="genreFilters" class="genre-list">
+                    <!-- Checkbox thể loại sẽ được render tự động bằng JS -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content: Danh sách phim -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Danh sách phim</h2>
+                <span id="resultCount">Hiển thị 0 phim</span>
+            </div>
+            <div id="movieGrid" class="movie-grid">
+                <!-- Các thẻ phim (card) sẽ được render tự động bằng JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Chi Tiết Phim -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Nội dung chi tiết phim sẽ được chèn qua JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
